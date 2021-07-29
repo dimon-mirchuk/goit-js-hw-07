@@ -23,9 +23,8 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-console.log(ingredients)
 
-const ingredientsListRef = document.querySelector("#ingredients")
+const ingredientsListRef = document.querySelector("ul#ingredients")
 
 // const addEl = ingredients => {
 //     let newElements = []
@@ -36,12 +35,12 @@ const ingredientsListRef = document.querySelector("#ingredients")
 //     });
 //     return ingredientsListRef.append(...newElements);
 // }
-const addEl = ingredients => ingredients.map((ingredient) => {
+const addEl = ingredients.map((ingredient) => {
     const createEl = document.createElement('li')
     createEl.textContent = ingredient
-return ingredientsListRef.append(createEl)
+    return createEl
 }
 )
  
-addEl(ingredients);
+ingredientsListRef.append(...addEl);
 

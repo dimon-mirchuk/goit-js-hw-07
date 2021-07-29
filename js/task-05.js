@@ -6,8 +6,8 @@ const inputNameRef = document.querySelector("#name-input");
 const outputNameRef = document.querySelector("#name-output");
 
 
-const onInputChange = event => {
-  outputNameRef.textContent = inputNameRef.value ? inputNameRef.value : 0;
+const onInputChange = () => {
+  outputNameRef.textContent = inputNameRef.value ? inputNameRef.value : "незнакомец";
 };
 
 inputNameRef.addEventListener('input', onInputChange);
