@@ -29,12 +29,15 @@ function random() {
 }
 function destroyBoxes() {
   containerBox.innerHTML = "";
+  boxSize = 30;
 }
+
+let boxSize = 30;
 
 function createBoxes(amount) {
 
   for (let i = 0; i < amount; i += 1) {
-    let boxSize = 30 + i * 10;
+    boxSize += 10;
     let div = document.createElement("div");
     div.style.cssText = `width: ${boxSize}px; height: ${boxSize}px; background-color: rgb(${random()},${random()},${random()})`;
     boxes.append(div);
